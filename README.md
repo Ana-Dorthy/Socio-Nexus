@@ -28,7 +28,7 @@ To run Socio Nexus locally, follow these steps:
 1. Clone the repository:
 
 
-git clone https://github.com/your-username/socio-nexus.git
+git clone [https://github.com/your-username/socio-nexus.git](https://github.com/Ana-Dorthy/Socio-Nexus.git)
 
 
 2. Navigate to the project directory:
@@ -48,22 +48,3 @@ Once the application is running, users can:
 - Follow other users by clicking the "Follow" button on their profile cards.
 - Search for users or content using the search bar.
 
-## Contributing
-
-Contributions to Socio Nexus are welcome! To contribute, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature: git checkout -b feature-name
-3. Commit your changes: git commit -am 'Add new feature'
-4. Push to the branch: git push origin feature-name
-5. Submit a pull request.
-
-Please follow the [code of conduct](CODE_OF_CONDUCT.md) while contributing.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-You can customize this README file further by adding more detailed information about your project, such as how to deploy it, any dependencies required, and any additional features or functionalities.
