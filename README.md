@@ -48,3 +48,11 @@ Once the application is running, users can:
 - Follow other users by clicking the "Follow" button on their profile cards.
 - Search for users or content using the search bar.
 
+![1](https://github.com/Ana-Dorthy/Socio-Nexus/assets/129649586/a109326d-c576-4eb0-b7a9-46047e4c11e7)
+![2](https://github.com/Ana-Dorthy/Socio-Nexus/assets/129649586/5e2556d8-6012-4809-8455-90f4f2922100)
+![3](https://github.com/Ana-Dorthy/Socio-Nexus/assets/129649586/5c3aa4ac-a54c-4f1c-9961-1d563ef6fef9)
+![4](https://github.com/Ana-Dorthy/Socio-Nexus/assets/129649586/a046b336-ff63-48ad-b82e-2ff2fd4656b2)
+![5](https://github.com/Ana-Dorthy/Socio-Nexus/assets/129649586/b491ded2-0d52-498f-9a57-40b43572cd08)
+
+
+
