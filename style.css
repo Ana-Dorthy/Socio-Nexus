@@ -1,0 +1,405 @@
+* {
+	position:relative;
+	width:100%;
+}
+
+body, html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	margin:0;
+	font-family: "Kanit", sans-serif;
+	font-size:1.4em;
+	background:black;
+	overflow:hidden;
+	background:silver; 
+}
+.bg {
+	width:100%;
+	height:100%;
+	position:absolute;
+	background: -webkit-linear-gradient(left, #92cc68 0%, #1fb4c8 100%), 
+    radial-gradient(circle at 20% 70%, #92cc68 0%, #1fb4c8 65%);
+   
+}
+
+.barWrapper {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:absolute;
+}
+.bar {
+	width:80%;
+	height:200vh;
+	background:rgba(215, 236, 232, 0.5);
+	transform:translate(30%, -20%)  rotate(25deg);
+	mix-blend-mode: overlay;
+	position:absolute;
+}
+.mainContent {
+	margin-top:20px;
+	position:relative;
+	width:90%;
+	color:white;
+	height:100%;
+}
+
+.contentWrapper {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	overflow:hidden;
+	padding-bottom:80px;
+	width:100%;
+	position:relative;
+	height:100%;
+}
+.flexCenter {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+}
+
+.maskOut {
+	width:fit-content;
+	font-weight:800;
+	font-size:clamp(20px, calc(100vw/8), 4em);
+	line-height:0.8em;
+	
+	display:flex;
+}
+
+.mask {
+	overflow:hidden;
+	width:fit-content;
+}
+
+.thin {
+	font-weight:200;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .box {
+    width: 35px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    transition: all .8s;
+    cursor: pointer;
+    position: relative;
+    background: #3498db;
+    overflow: hidden;
+  }
+  
+  .box:before {
+    content: "L";
+    position: absolute;
+    top: 0;
+    background: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform .4s;
+  }
+  
+  .box:nth-child(2)::before {
+    transform: translateY(-100%);
+    content: 'O';
+  }
+  
+  .box:nth-child(3)::before {
+    content: 'G';
+  }
+  
+  .box:nth-child(4)::before {
+    transform: translateY(-100%);
+    content: 'I';
+  }
+  
+  .box:nth-child(5)::before {
+    content: 'N';
+  }
+  
+  .button:hover .box:before {
+    transform: translateY(0);
+  }
+
+
+.feed-form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.feed-form input {
+  height: 54px;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 15px;
+  border: none;
+  padding: 0 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #4B4B4B;
+}
+
+.button_submit:hover, .feed-form input:hover {
+  transform: scale(1.009);
+  box-shadow: 0px 0px 3px 0px #212529;
+}
+
+.button_submit {
+  width: 100%;
+  height: 54px;
+  font-size: 14px;
+  color: white;
+  background: rgb(8, 8, 8);
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#loginSection {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*login*/
+
+.log {
+    display: none;
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    box-shadow: 8px 8px 20px rgb(128, 128, 128);
+    position: relative;
+    overflow: hidden;
+}
+.btn {
+    height: 60px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 30px rgb(158, 232, 219);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login,
+.register {
+    font-size: 22px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+ 
+.slider {
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            rgb(238, 248, 247),
+            rgba(84, 243, 245, 0.957));
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.moveslider {
+    left: 250px;
+}
+ 
+.l-form{
+    height: 500px;
+    width: 1000px;
+    padding: 20px 0;
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    left: 0px;
+}
+ 
+
+ 
+.lbox,
+.sbox {
+    position: fixed;
+    height: 100%;
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+}
+ 
+.lbox {
+    gap: 50px;
+    display:block;
+}
+ 
+.sbox {
+    gap: 30px;
+    display: none;
+}
+ 
+.element {
+    height: 60px;
+    width: 400px;
+    outline: none;
+    border: none;
+    color: rgb(77, 77, 77);
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+ 
+.clkbtn {
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image:  linear-gradient(to right,
+    rgb(238, 248, 247),
+    rgba(84, 243, 245, 0.957));
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+ 
+/* For Responsiveness of the page */
+ 
+@media screen and (max-width: 650px) {
+    .log {
+        height: 600px;
+        width: 300px;
+    }
+ 
+ 
+    .btn {
+        height: 50px;
+        width: 200px;
+        margin: 20px auto;
+    }
+ 
+    .login,
+    .register {
+        font-size: 19px;
+    }
+ 
+    .slider {
+        height: 50px;
+        width: 100px;
+        left: 50px;
+    }
+ 
+    .moveslider {
+        left: 150px;
+    }
+ 
+    .l-form {
+        height: 500px;
+        width: 600px;
+    }
+ 
+    .l-form-move {
+        left: -300px;
+    }
+ 
+    .lbox,
+    .sbox {
+        height: 100%;
+        width: 300px;
+    }
+ 
+    .element {
+        height: 50px;
+        width: 250px;
+        font-size: 15px;
+    }
+ 
+    .clkbtn {
+        height: 50px;
+        width: 130px;
+        font-size: 19px;
+    }
+}
+ 
+@media screen and (max-width: 320px) {
+    .log {
+        height: 600px;
+        width: 250px;
+    }
+
+ 
+    .btn {
+        height: 50px;
+        width: 200px;
+        margin: 20px auto;
+    }
+ 
+    .login,
+    .register {
+        font-size: 19px;
+    }
+ 
+    .slider {
+        height: 50px;
+        width: 100px;
+        left: 27px;
+    }
+ 
+    .moveslider {
+        left: 127px;
+    }
+ 
+    .l-form{
+        height: 500px;
+        width: 500px;
+    }
+ 
+    .l-form-move {
+        left: -250px;
+    }
+ 
+    .lbox,
+    .sbox {
+        height: 100%;
+        width: 250px;
+    }
+ 
+    .element {
+        height: 50px;
+        width: 220px;
+        font-size: 15px;
+    }
+ 
+    .clkbtn {
+        height: 50px;
+        width: 130px;
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="loader">
+                SOCIO NEXUS
+            </div>
+
+            <button id="headerButton">Button</button>
+        </div>
+        
+    </header>
+     
+    <div class="main-container">
+        <div class="left-section">
+            <button id="photoBtn">Photo</button>
+            <button id="reelsBtn">Reels</button>
+
+            <div id="photoContent" class="content ">
+               
+                <div class="photo-card">
+                    <img src="D:\CIT\Project\BOB\images\post1.jpg" alt="Photo 1">
+                    <p>Kiru_12 ~ Make life Colourful</p>
+                </div>
+                <div class="photo-card">
+                    <img src="D:\CIT\Project\BOB\images\post2.jpeg" alt="Photo 2">
+                    <p>Anu_10 ~ Best School Memories</p>
+                </div>
+            </div>
+
+            <div id="reelsContent" class="content hidden">
+                
+                <div class="reels-card">
+                    <video controls autoplay loop>
+                        <source src="D:\CIT\Project\BOB\videos\reel1.mp4" type="video/mp4">
+                     
+                    </video>
+                    <p>Blessy_03 ~ Life is Beatiful</p>
+                </div>
+                <div class="reels-card">
+                    <video controls autoplay loop>
+                        <source src="D:\CIT\Project\BOB\videos\reel2.mp4" type="video/mp4">
+                     
+                    </video>
+                    <p>Glady_26 ~ Everyday id a vlog</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="search">
+                <input id="searchInput" placeholder="Search..." type="text">
+                <button type="button" onclick="search()">Go</button>
+            </div>
+
+            <div class="follow" id="card1">
+                <div class="image"></div>
+                <div class="card-info">
+                    <span>Sandhya</span>
+                    <p>@sandhya_2004</p>
+                </div>
+                <a class="button" href="#">Follow</a>
+            </div>
+
+            <div class="follow" id="card2">
+                <div class="image"></div>
+                <div class="card-info">
+                    <span>Harshini</span>
+                    <p>@harshu_08</p>
+                </div>
+                <a class="button" href="#">Follow</a>
+            </div>
+            <div class="follow" id="card2">
+                <div class="image"></div>
+                <div class="card-info">
+                    <span>Nemoshini</span>
+                    <p>@nemo_19</p>
+                </div>
+                <a class="button" href="#">Follow</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const photoBtn = document.getElementById("photoBtn");
+    const reelsBtn = document.getElementById("reelsBtn");
+    const photoContent = document.getElementById("photoContent");
+    const reelsContent = document.getElementById("reelsContent");
+    const dialogOverlay = document.getElementById("dialogOverlay");
+    const headerButton = document.getElementById("headerButton");
+    const closeBtn = document.querySelector(".close");
+    const searchInput = document.getElementById("searchInput");
+    const followCards = document.querySelectorAll(".follow");
+
+    // Function to hide all content sections
+    function hideAllContent() {
+        photoContent.classList.add("hidden");
+        reelsContent.classList.add("hidden");
+    }
+
+    // Event listeners for buttons
+    photoBtn.addEventListener("click", function() {
+        hideAllContent();
+        photoContent.classList.remove("hidden");
+    });
+
+    reelsBtn.addEventListener("click", function() {
+        hideAllContent();
+        reelsContent.classList.remove("hidden");
+    });
+
+    // Event listener for header button click
+    headerButton.addEventListener("click", function() {
+        dialogOverlay.style.display = "block";
+        // Apply blur effect to the main content
+        document.body.style.filter = "blur(5px)";
+    });
+
+    // Event listener for close button click
+    closeBtn.addEventListener("click", function() {
+        dialogOverlay.style.display = "none";
+        // Remove blur effect from the main content when dialog box is closed
+        document.body.style.filter = "none";
+    });
+
+    // Event listener to close dialog box when clicking outside the box
+    window.addEventListener("click", function(event) {
+        if (event.target === dialogOverlay) {
+            dialogOverlay.style.display = "none";
+            // Remove blur effect from the main content when dialog box is closed
+            document.body.style.filter = "none";
+        }
+    });
+
+    // Event listener for search button click
+    document.getElementById("searchBtn").addEventListener("click", function() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        followCards.forEach(function(card) {
+            const cardName = card.querySelector(".card-info span").textContent.toLowerCase();
+            if (cardName.includes(searchTerm)) {
+                card.style.display = "flex";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

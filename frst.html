@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socio Nexus</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400&family=Russo+One&display=swap">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+
+</head>
+<body>
+    <div class="contentWrapper">
+        <div class="bg"></div>
+        <div class="barWrapper">
+            <div class="bar"></div>
+        </div>
+        <div class="contentWrapper">
+            <div class="mainContent flexCenter" id="mainContent">
+                <div class="maskOut getCreative">
+                    <div class="mask"><div><span class="thin">SOCIO</span></div></div>
+                    <div class="mask"><div>NEXUS</div></div>
+                </div>
+                <div class="maskOut haveFun">
+                    <div class="mask"><div><span class="thin">EXPLORE.</span></div></div>
+                    <div class="mask"><div>CONNECT.ENGAGE</div></div>
+                </div>
+
+                <div class="button" onclick="toggleLoginSection()">
+                    <div class="box">C</div>
+                    <div class="box">L</div>
+                    <div class="box">I</div>
+                    <div class="box">C</div>
+                    <div class="box">K</div>
+                </div>
+            </div>
+
+            <!-- Your login section -->
+            <div class="log" style="display:none;">
+                <div class="slider"></div>
+                <div class="btn">
+                    <button class="login">Login</button>
+                    <button class="register">Register</button>
+                </div>
+                <div class="l-form" >
+                    <div class="lbox">
+    
+                            <input type="text" class="element loginid" placeholder="Enter Your ID name">
+                            <input type="password" class="element pass" placeholder="Enter Your Password">
+                            <button class="clkbtn">Login</button>
+                        
+                    </div>
+                    <div class="sbox">
+                     
+                            <input type="text" class="element signupid" placeholder="Create Your ID eg:adina_2003">
+                            <input type="text" class="element email" placeholder="Enter Your Email-ID">
+                            <input type="password" class="element pass" placeholder="Enter Your Password">
+                            <input type="password" class="element pass" placeholder="Re-enter Your Password">
+                            <button class="clkbtn">Create</button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End of login section -->
+        </div>
+    </div>
+    <button onclick="toggleLoginSection()">CLICK</button>
+    <script src="script.js"></script>
+</body>
+</html>
